@@ -9,6 +9,30 @@ namespace boxProgram
         public int width;
         public int volume;
 
+        //another way to create a property
+        //prop tab
+        public int Width { get; set; }
+
+        //another way to create a set and get below..but shorter
+        public int Height 
+        {
+            get
+            {
+                return height;
+            }
+            set
+            {
+                if(value < 0 )
+                {
+                    System.Console.WriteLine("Please enter in a correct value for heigth");
+                }
+                else
+                {
+                height = value;
+                }
+            }
+        }
+
         //creating a method to set a variable
         //changing the public to private will not allow outside programs to set the length
         public void SetLength(int length) 
